@@ -50,7 +50,7 @@ const Welcome = () => {
             </CardContent>
           </CardActionArea>
           <CardActions className="d-flex justify-content-center">
-            <Link to="http://159.223.195.60:3000/login">
+            <Link to="/login">
               <MDBBtn color="primary" outline >
                 Log In
               </MDBBtn>
