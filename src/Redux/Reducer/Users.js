@@ -8,11 +8,11 @@ const initialState = {
   loading: false,
   error: "",
 };
-const url = "https://henry-s-final-project-backend-production.up.railway.app";
+const url = "http://159.223.195.60:3001";
 export const getAllusers = createAsyncThunk(
   "getAllusers/getAllusers",
   async () => {
-    return await fetch(`http://localhost:3001/user/allUsers`).then((response) =>
+    return await fetch(`${url}/user/allUsers`).then((response) =>
       response.json()
     );
   }
@@ -22,7 +22,7 @@ export const updateUser = createAsyncThunk(
   "updateUser/updateUser",
   async (id, input) => {
     return axios
-      .put(`http://localhost:3001/user/update/${id}`, input)
+      .put(`${url}/user/update/${id}`, input)
       .then((response) => {
         const respuesta = response;
       });
@@ -31,7 +31,7 @@ export const updateUser = createAsyncThunk(
 export const getByIdUser = createAsyncThunk(
   "getByIdUser/getByIdUser",
   async (id) => {
-    return await fetch(`http://localhost:3001/user/${id}`).then((respuesta) =>
+    return await fetch(`${url}/user/${id}`).then((respuesta) =>
       respuesta.json()
     );
   }
@@ -39,7 +39,7 @@ export const getByIdUser = createAsyncThunk(
 export const deleteUserId = createAsyncThunk(
   "deleteUserId/deleteUserId",
   async (id) => {
-    return await axios.put(`http://localhost:3001/user/delete/${id}`);
+    return await axios.put(`${url}/user/delete/${id}`);
   }
 );
 

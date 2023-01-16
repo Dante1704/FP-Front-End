@@ -8,12 +8,12 @@ const initialState = {
   allReview: [],
   error: "",
 };
-const url = "https://henry-s-final-project-backend-production.up.railway.app";
+const url = "http://159.223.195.60:3001";
 
 export const getAllReviews = createAsyncThunk(
   "getAllReviews/getAllReviews",
   async () => {
-    return await fetch(`http://localhost:3001/review/AllReviews`).then(
+    return await fetch(`${url}/review/AllReviews`).then(
       (response) => response.json()
     );
   }

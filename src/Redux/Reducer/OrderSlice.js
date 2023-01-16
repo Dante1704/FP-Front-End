@@ -5,11 +5,12 @@ const initialState = {
   loading: false,
   error: "",
 };
-const url = "https://henry-s-final-project-backend-production.up.railway.app";
+const url = "http://159.223.195.60:3001";
+
 export const getAllOrders = createAsyncThunk(
   "getAllOrders/getAllOrders",
   async () => {
-    return await fetch(`http://localhost:3001/order/allOrders`).then(
+    return await fetch(`${url}/order/allOrders`).then(
       (response) => response.json()
     );
   }

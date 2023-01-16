@@ -7,12 +7,13 @@ const initialState = {
   quantity: 0,
   total: 0,
 };
-const url = "https://henry-s-final-project-backend-production.up.railway.app";
+const url = "http://159.223.195.60:3001";
+
 export const clearCart = createAsyncThunk(
   "clearCart/clearCart",
   async (idUser) => {
     return await axios
-      .delete(`http://localhost:3001/cart/delete/${idUser}`) // url
+      .delete(`${url}/cart/delete/${idUser}`) // url
       .then((respuesta) => console.log(respuesta))
       .catch((respuesta) => console.log(respuesta));
   }

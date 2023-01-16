@@ -27,7 +27,7 @@ export default function checkoutForm() {
   const [loading, setLoading] = React.useState(false);
 
   const totalCart = useSelector((state) => state.cart.total);
-  const url = "https://henry-s-final-project-backend-production.up.railway.app";
+  const url = "http://159.223.195.60:3001";
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -39,7 +39,7 @@ export default function checkoutForm() {
     if (!error) {
       const { id } = paymentMethod;
       const { data } = await axios.post(
-        `http://localhost:3001/checkout/checkout`,
+        `${url}/checkout/checkout`,
         {
           id,
           amount: totalCart * 100,
@@ -57,7 +57,7 @@ export default function checkoutForm() {
       };
       axios
         .post(
-          `http://localhost:3001/order/newOrder`,
+          `${url}/order/newOrder`,
           {
             products,
             products_quantity,

@@ -11,12 +11,12 @@ import image from "../../Images/welcome-bg.jpg";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdb-react-ui-kit";
 
 const Welcome = () => {
-  const url = "https://henry-s-final-project-backend-production.up.railway.app";
+  const url = "http://159.223.195.60:3001";
   const URL = useParams().confirmationCode;
   console.log("el path es: ", URL);
   const verifyUser = (URL) => {
     return axios
-      .get(`http://localhost:3001/auth/confirm/${URL}`)
+      .get(`${url}/auth/confirm/${URL}`)
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error.message));
   };
