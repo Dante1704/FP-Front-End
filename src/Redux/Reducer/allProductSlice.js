@@ -9,7 +9,7 @@ const initialState = {
   error: false,
 };
 
-const url = "http://159.223.195.60:3001";
+const url = "https://tienda-nuestra-api.vercel.app";
 export const getAllProducts = createAsyncThunk(
   "getAllProducts/getAllProducts",
   async () => {

@@ -27,7 +27,7 @@ export default function checkoutForm() {
   const [loading, setLoading] = React.useState(false);
 
   const totalCart = useSelector((state) => state.cart.total);
-  const url = "http://159.223.195.60:3001";
+  const url = "https://tienda-nuestra-api.vercel.app";
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);

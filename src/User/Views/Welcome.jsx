@@ -11,7 +11,7 @@ import image from "../../Images/welcome-bg.jpg";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdb-react-ui-kit";
 
 const Welcome = () => {
-  const url = "http://159.223.195.60:3001";
+  const url = "https://tienda-nuestra-api.vercel.app";
   const URL = useParams().confirmationCode;
   console.log("el path es: ", URL);
   const verifyUser = (URL) => {

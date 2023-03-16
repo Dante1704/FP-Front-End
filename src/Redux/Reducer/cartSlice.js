@@ -7,7 +7,7 @@ const initialState = {
   quantity: 0,
   total: 0,
 };
-const url = "http://159.223.195.60:3001";
+const url = "https://tienda-nuestra-api.vercel.app";
 
 export const clearCart = createAsyncThunk(
   "clearCart/clearCart",
