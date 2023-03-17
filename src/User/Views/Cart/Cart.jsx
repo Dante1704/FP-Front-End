@@ -209,8 +209,8 @@ export const Cart = () => {
           );
         })
       ) : (
-        <MDBRow className="bg-light">
-          <img src={emptyCart} className="d-flex justify-content-center"/>
+        <MDBRow className="d-flex justify-content-center bg-light">
+          <img src={emptyCart} style={{maxWidth:"800px"}}/>
         </MDBRow>
       )}
       <MDBRow  className="bg-light">
