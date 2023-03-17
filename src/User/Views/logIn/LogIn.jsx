@@ -81,14 +81,19 @@ export default function LogIn() {
     }
   };
 
-  useEffect(() => {
+  useEffect(async () => {
     // Variables globales de google (vienen del script que estan en el html)
     /* if (window.hasOwnProperty("account")) { */
-    window.google.accounts.id.initialize({
+    try {
+      await window.google.accounts.id.initialize({
       client_id:
         "1029884607261-r66qvleuofparcpjbiq10v5ln495mctp.apps.googleusercontent.com",
       callback: handleCallBack,
     });
+    } catch (error) {
+      console.log(error)
+    }
+   
     
     window.google.accounts.id.renderButton(document.getElementById("signInDiv"), {
       theme: "outline",
