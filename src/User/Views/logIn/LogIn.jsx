@@ -77,7 +77,7 @@ export default function LogIn() {
       const userObject = jwt_decode(response.credential);
       setGoogleUser(userObject);
       document.getElementById("signInDiv").hidden = true;
-      navigate("/home");
+      navigate("/home"); 
     }
   };
 
@@ -86,7 +86,7 @@ export default function LogIn() {
     /* if (window.hasOwnProperty("account")) { */
     window.google.accounts.id.initialize({
       client_id:
-        "367427673923-91opfd7qm11akhltnu97v0emf9e06tj1.apps.googleusercontent.com",
+        "1029884607261-r66qvleuofparcpjbiq10v5ln495mctp.apps.googleusercontent.com",
       callback: handleCallBack,
     });
     
