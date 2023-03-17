@@ -3,7 +3,7 @@ import axios from "axios";
 import { setAuth, setErrorAuth } from "../Reducer/authSlice";
 import { restoreCart } from "../Reducer/cartSlice";
 
-const url = "https://tiendanuestra.vercel.app";
+const url = "https://tienda-nuestra-api.vercel.app";
 
 export const updateUser = (id, values) => async () => {
   await axios({
