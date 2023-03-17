@@ -210,7 +210,7 @@ export const Cart = () => {
         })
       ) : (
         <MDBRow className="bg-light">
-          <img src={emptyCart} />
+          <img src={emptyCart} className="d-flex justify-content-center"/>
         </MDBRow>
       )}
       <MDBRow  className="bg-light">
